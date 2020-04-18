@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:'COCOGOOSE';
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+#text {
+  position: relative;
+  color: #fff;
+  font-size: 15em;
+  font-weight: 700;
+  line-height: 0.9em;
+  letter-spacing: 2px;
+  text-align: center;
+  /* 字体旋转倾斜 */
+  transform: rotate(-28deg) skew(25deg);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 制作阴影 */
+#text::before {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  content: attr(data-text);
+  filter: blur(8px);
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: none;
+  z-index: -1;
+}
